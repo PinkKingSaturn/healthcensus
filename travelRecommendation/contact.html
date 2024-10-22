@@ -5,20 +5,19 @@
         <meta http-equiv="X-UA-compatible" content="IE=edge"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="stylesheet" href="stylesheet.css">
-        
+
         <title>TravelRec</title>
-        
+
     </head>
     <body>
         <nav>
-            <h1 class="name">Travel Far</h1>
-            <img alt="airplane_logo" src="pictures/airplane.jpg"
+            <h1 class="name">Travel Far<img class ="airplanepic" alt="airplane_logo" src="pictures/airplane.jpg"></h1>
+
             <ul class="navigation">
                 <li><a href="travel_recommendation.html" class="nav-link">Home</a></li>
                 <li><a href="about_us.html" class="nav-link">About Us</a></li>
                 <li><a href="#contact" class="nav-link">Contact Us</a></li>
-               
-            </ul>
+       </ul>
 
         </nav>
 <section class="contact" id="contact">
@@ -26,27 +25,34 @@
   action="https://formspree.io/f/xaygpdgn"
   method="POST"
 >
-<label> Name:
+
+
+
+<div class="form-group">
+  <h1 class="contact-info">Get In Contact!</h1>
+<label> Name:<br />
     <input type="text" id="name" placeholder="Enter your Name" required>
-  <label>
-    Your email:
+</label>
+    <label>
+    Your email:<br />
     <input type="email" id="email" placeholder="Enter your Email" required>
   </label>
   <label>
-    Your message:
+    Your message:<br />
     <textarea id="message" placeholder="..." required></textarea>
   </label>
-  
+
   <button type="submit" class="submitBtn">Send</button>
 </form>
+</div>
 </section>
-        
+
 
 
 
     <footer></footer>
 
     <script src="travel_recommendation.js"></script>
-    
+
     </body>
 </html>

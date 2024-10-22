@@ -5,14 +5,21 @@
         <meta http-equiv="X-UA-compatible" content="IE=edge"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="stylesheet" href="stylesheet.css">
-        
+
         <title>TravelRec</title>
-        
+        <style type="text/css">
+            body{ background-image: url("pictures/travelbackground.jpg") !important;
+             background-size: cover;
+             background-repeat: no-repeat;
+             background-position: center ;
+             background-attachment: fixed;
+             background-blend-mode: multiply; }
+         </style>
     </head>
     <body>
         <nav>
-            <h1 class="name">Travel Far</h1>
-            <img alt="airplane_logo" src="pictures/airplane.jpg"
+            <h1 class="name">Travel Far<img class ="airplanepic" alt="airplane_logo" src="pictures/airplane.jpg"></h1>
+
             <ul class="navigation">
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="about_us.html" class="nav-link">About Us</a></li>
@@ -21,16 +28,21 @@
                 <li><button id='btnSearch'>Search</button></li>
                 <li><button id="btnReset">Clear</button></li>
             </ul>
-
         </nav>
 <section class="main-page" id="home">
-    <div >
-        <h1 class="catchphrase"> All the Places You'll Go!</h1><br/>
-        <p class="mini-catch">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </div>
- <button class="book-now"><a href="contact.html">Book Now!</a></button>
-        
+    <div class="catchphrase" >
+        <h1 > All the<br/> Places <br/>You'll Go!</h1>
+        </div>
+    <div class="mini-catch">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+   <div> <button class="book-now" id="book-now">Book Now!</button>
+</div>
+</div>
+
+
+
 </section>
+
 
 <div class="socials">
 
@@ -38,7 +50,7 @@
       alt="Linkedin"
       loading="lazy"
       class="socicon"/>
-    
+
 
       <img alt="Youtube"
       src="pictures/youtubelogo.png" loading="lazy"
@@ -47,12 +59,12 @@
       <img alt="Facebook"
       src="pictures/fb.png" loading="lazy"
       class="socicon"/>
-   
+
     </div>
 
     <footer></footer>
 
     <script src="travel_recommendation.js"></script>
-    
+
     </body>
 </html>

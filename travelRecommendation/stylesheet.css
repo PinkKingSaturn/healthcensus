@@ -1,0 +1,284 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+nav {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    z-index: 1;
+    background-color: #021534!important;
+
+  }
+
+nav ul {
+    list-style-type: none;
+    background-color: #021534;
+
+  }
+
+nav ul li {
+    display:inline-block;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+    background-color: #021534;
+  }
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    background-color: #021534;
+  }
+
+.name {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+    background-color: #021534;
+    color: #fff;
+  }
+
+.nav-link:hover {
+    color: #ED6196;
+    border-bottom: 2px solid #ED6196;
+  }
+
+nav input[type="text"] {
+    padding: 5px;
+    width: 200px;
+    border: none;
+    text-align: left;
+    color: #000;
+    background-color: #021534;
+}
+
+.nav-link {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    transition: all 0.3s ease;
+    color: #fff;
+}
+.airplanepic {
+    width: 30px;
+    height: 30px;
+   mix-blend-mode: multiply;
+    transform: scale(1.7);
+    margin-left: 20px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color:#000;
+}
+/*landing page styling*/
+section {
+    max-width: 1100px;
+    margin: auto;
+
+}
+
+.catchphrase{
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 100px;
+    gap: 2.5rem;
+    max-width: 250px;
+    line-height: 3em;
+
+}
+
+.mini-catch{
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 50px;
+   line-height: 1.5em;
+   color: #0A0A0A;
+
+
+}
+
+.catchphrase, .mini-catch {
+    justify-content: space-evenly;
+    align-items: left;
+    gap: 1.5rem;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+}
+.book-now {
+    font-size: 1rem;
+    color: #fff;
+    background-color: #021534!important;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 1px;
+    margin-top: 50px;
+}
+.book-button{
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-left: 50px;
+    display: inline-flexbox;
+    justify-content: center;
+}
+
+/*about us styling */
+#about h1{
+    text-align: center;
+    margin-top: 100px;
+    font-size: 45px;
+    justify-content: space-evenly;
+    padding: 2rem 2rem;
+}
+.about-info p{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-evenly;
+    gap: 2rem;
+    font-size: 30px;
+    max-width: 1100px;
+    line-height: 2em;
+}
+
+.employee-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    margin: 50px;
+    padding: 20px;
+    gap: 3rem;
+    box-shadow: 0 6px 10px #22272e;
+
+}
+
+.employee-card{
+    width: 500px;
+    height: 600px;
+
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    padding: 1rem 2rem;
+
+}
+.empolyee-name{
+    font-size: 30px;
+    font-style: bold;
+    text-align: center;
+    margin:auto;
+
+}
+.employee-details{
+    font-size: 25px;
+    color: #000;
+    line-height: 2em;
+    margin-top: 15px;
+}
+.employee-pic{
+    width: 50%;
+    height: 35%;
+}
+
+.job-title{
+    font-size: 25px;
+    font-style: bolder;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/*contact page styling */
+
+.contact div.form-group{
+    max-width: 1100px;
+    max-height: auto;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    margin-top: 100px;
+
+}
+.contact-info {
+    display: flex;
+    align-self: center;
+    gap: 2rem;
+    font-size: 45px;
+    margin: 50px 50px 30px 50px;
+    padding: 2rem 2rem;
+    text-align: center;
+
+}
+.form-group {
+    display: flex;
+    gap: 1rem;
+    margin-top: 90px;
+    margin-bottom: 20px;
+    border-radius: 2rem;
+    border: none;
+    box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.11);
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    max-width: 900px;
+
+
+}
+label, input[type="text"],input[type="email"], textarea {
+    padding: 1rem 1rem;
+    background-color: #fff;
+    color: #000;
+
+
+}
+label {
+    font-size: 20px;
+}
+.form-group button{
+    padding: 10px 20px;
+    background-color: #E0E0E2;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 50px;
+}
+
+
+/*on every page */
+.socials {
+    display: grid;
+    flex-direction: column;
+    position: sticky;
+    justify-content: flex-end;
+    left: 1%;
+    bottom: 50%;
+    width: max-content;
+    margin-left: auto;
+  }
+
+.socicon {
+    width: 2rem;
+    height: 2rem;
+    mix-blend-mode: multiply;
+  }
+
+footer {
+  position: fixed;
+  height: 50px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin-bottom: 0px;
+
+  }
