@@ -11,69 +11,70 @@ function searchDestination() {
     fetch('/travelRecommendation/travel_recommendation_api.json')
         .then(response => response.json())
         .then(data => {
-
-            const countries = ['country', 'countries'];
+            const countries = data.countries.map(country => country.name.toLowerCase());
             const beaches = ['beach', 'beaches'];
             const temples = ['temple', 'temples'];
 
             function createLocationCard(imageUrl, name, description) {
-                // Create the main card div
                 const cardDiv = document.createElement('div');
-                cardDiv.className = 'location-card'; // Add class for CSS
+                cardDiv.className = 'location-card';
 
-                // Create the image element
                 const img = document.createElement('img');
-                img.className = 'loc_img'; // Add class for CSS
-                img.src = imageUrl; // Set the image source
-                img.alt = ''; // Set alt attribute (you can add a meaningful description)
+                img.className = 'loc_img';
+                img.src = imageUrl;
+                img.alt = '';
 
-                // Create the heading element
                 const heading = document.createElement('h3');
-                heading.className = 'location-name'; // Add class for CSS
-                heading.textContent = name; // Set the text content
+                heading.className = 'location-name';
+                heading.textContent = name;
 
-                // Create the paragraph element
                 const paragraph = document.createElement('p');
-                paragraph.className = 'location-info'; // Add class for CSS
-                paragraph.textContent = description; // Set the text content
+                paragraph.className = 'location-info';
+                paragraph.textContent = description;
 
-                // Append the elements to the card div
                 cardDiv.appendChild(img);
                 cardDiv.appendChild(heading);
                 cardDiv.appendChild(paragraph);
 
-                return cardDiv; // Return the constructed card
+                return cardDiv;
             }
 
+            // Check if the input matches a specific country
             if (countries.includes(input)) {
                 const country = data.countries.find(country => country.name.toLowerCase() === input);
-                // Check if countries data exists
-                if (data.countries && Array.isArray(data.countries)) {
-                    for (let i = 0; i < data.countries.length; i++) {
-                        if (data.countries[i].cities && Array.isArray(data.countries[i].cities)) {
-                            for (let j = 0; j < data.countries[i].cities.length; j++) {
-                                const city = data.countries[i].cities[j];
-                                const card = createLocationCard(city.imageUrl, city.name, city.description);
-                                resultDiv.appendChild(card); // Append the card to resultDiv
-                            }
-                        }
-                    }
+                if (country && country.cities && Array.isArray(country.cities)) {
+                    country.cities.forEach(city => {
+                        const card = createLocationCard(city.imageUrl, city.name, city.description);
+                        resultDiv.appendChild(card);
+                    });
                 } else {
-                    resultDiv.innerHTML = 'No country data available.';
+                    resultDiv.innerHTML = 'No cities found for this country.';
                 }
-            } else if (beaches.includes(input)) {
-                for (let i = 0; i < data.beaches.length; i++) {
-                    const beach = data.beaches[i];
-                    const card = createLocationCard(beach.imageUrl, beach.name, beach.description);
-                    resultDiv.appendChild(card); // Append the card to resultDiv
+            }
+            // Check if the input matches beaches
+            else if (beaches.includes(input)) {
+                if (data.beaches && Array.isArray(data.beaches)) {
+                    data.beaches.forEach(beach => {
+                        const card = createLocationCard(beach.imageUrl, beach.name, beach.description);
+                        resultDiv.appendChild(card);
+                    });
+                } else {
+                    resultDiv.innerHTML = 'No beach data available.';
                 }
-            } else if (temples.includes(input)) {
-                for (let i = 0; i < data.temples.length; i++) {
-                    const temple = data.temples[i];
-                    const card = createLocationCard(temple.imageUrl, temple.name, temple.description);
-                    resultDiv.appendChild(card); // Append the card to resultDiv
+            }
+            // Check if the input matches temples
+            else if (temples.includes(input)) {
+                if (data.temples && Array.isArray(data.temples)) {
+                    data.temples.forEach(temple => {
+                        const card = createLocationCard(temple.imageUrl, temple.name, temple.description);
+                        resultDiv.appendChild(card);
+                    });
+                } else {
+                    resultDiv.innerHTML = 'No temple data available.';
                 }
-            } else {
+            }
+            // If no matches found
+            else {
                 resultDiv.innerHTML = 'Destination not found.';
             }
         })
