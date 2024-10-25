@@ -8,7 +8,7 @@ function searchDestination() {
 
     resultDiv.innerHTML = '';
 
-    fetch('/travel_recommendation_api.json')
+    fetch('./travel_recommendation_api.json')
         .then(response => response.json())
         .then(data => {
             const countries = data.countries.map(country => country.name.toLowerCase());
