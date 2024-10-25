@@ -1,7 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Chicle&family=DM+Serif+Text:ital@0;1&family=Oleo+Script:wght@400;700&family=Shrikhand&family=Space+Grotesk:wght@300..700&display=swap');
+
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+}
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+
 
 }
 nav {
@@ -12,6 +20,7 @@ nav {
     position: sticky;
     z-index: 1;
     background-color: #021534!important;
+    transition: all 0.3s ease;
 
   }
 
@@ -33,30 +42,66 @@ nav a {
     color: #fff;
     font-weight: bold;
     background-color: #021534;
+    transition: all 0.3s ease;
   }
 
 .name {
     text-align: center;
-    font-size: 30px;
+    font-family: "Chicle", serif !important;
+    font-size: 45px;
+    padding-left: 20px;
     margin-bottom: 20px;
     background-color: #021534;
-    color: #fff;
-  }
+    color: #ff4000;
+    background-image: linear-gradient(135deg, #ff4000 36%, #ff5700 40%, #ff6e00 48%, #ff8500 57%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: .5px rgba(255, 255, 255, 0.7);
+
+}
+
+
 
 .nav-link:hover {
     color: #ED6196;
     border-bottom: 2px solid #ED6196;
   }
 
-nav input[type="text"] {
-    padding: 5px;
-    width: 200px;
+.locationInput {
+    width: 300px;
+    height: 25px;
     border: none;
     text-align: left;
     color: #000;
-    background-color: #021534;
+    font-size: 15px;
+    font-weight: 100 !important;
 }
-
+input::placeholder, textarea::placeholder{
+    background-color: #fff !important;
+    color: #555 !important;
+    font-weight: lighter;
+    opacity: 0.75;
+}
+input:focus, textarea:focus{
+    border: 2px solid #ED6196 !important;
+    background-color: #fff !important;
+    opacity: 1;
+    font-weight: 100;
+}
+input:active, textarea:active{
+    border: 2px solid #ED6196 !important;
+    background-color: #fff !important;
+    opacity: 1;
+    font-weight: 100;
+}
+.search-Btn {
+    background-color: #fff !important;
+    color: #000;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
 .nav-link {
     list-style: none;
     display: flex;
@@ -66,41 +111,78 @@ nav input[type="text"] {
     color: #fff;
 }
 .airplanepic {
-    width: 30px;
-    height: 30px;
-   mix-blend-mode: multiply;
-    transform: scale(1.7);
+    width: 40px;
+    height: 40px;
     margin-left: 20px;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    color:#000;
+    height: 100%;
+
+
+}
+.background-img {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("pictures/travelbackground.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: scroll, local;
+    max-width: auto;
+    max-height: auto;
+    background-origin: border-box;
+
 }
 /*landing page styling*/
-section {
-    max-width: 1100px;
-    margin: auto;
+.main-page, .about, .contact {
+    max-width: 1500px;
+    margin:auto;
+    height: 1300px;
+    position: relative;
 
 }
-
+.earth_container{
+    display: inline-flex;
+    max-width: 1500px;
+    gap: 300px;
+    position: relative;
+}
 .catchphrase{
-    font-size: 3rem;
+    font-family: "Shrikhand", serif;
+    font-size: 3.5rem;
     text-align: center;
     margin-top: 100px;
     gap: 2.5rem;
-    max-width: 250px;
+    max-width: 350px;
+    display: inline-block;
     line-height: 3em;
+    margin-left: 275px;
+    font-weight: bolder;
+    color: #ff4000;
+    background-image: linear-gradient(135deg, #ff4000 36%, #ff5700 40%, #ff6e00 48%, #ff8500 57%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: .5px rgba(255, 255, 255, 0.7);
 
 }
 
 .mini-catch{
-    font-size: 1rem;
+    font-family: "DM Serif Text", serif;
+    font-size: 1.5rem;
     text-align: center;
-    margin-top: 50px;
-   line-height: 1.5em;
-   color: #0A0A0A;
-
+    margin-top: 70px;
+    line-height: 2em;
+    font-weight: lighter;
+    color: #fff;
+    text-shadow:
+    0.03em 0 rgba(0, 0, 0, 0.4),
+    0 0.03em rgba(0, 0, 0, 0.4),
+    0.03em 0 rgba(0, 0, 0, 0.4),
+    0 -0.03em rgba(0, 0, 0, 0.4),
+    -0.03em -0.03em rgba(0, 0, 0, 0.4),
+    -0.03em 0.03em rgba(0, 0, 0, 0.4),
+    0.03em -0.03em rgba(0, 0, 0, 0.4),
+    0.03em 0.03em rgba(0, 0, 0, 0.4);
 
 }
 
@@ -111,11 +193,18 @@ section {
     margin-bottom: 100px;
     display: flex;
     flex-direction: column;
+
 }
 .book-now {
-    font-size: 1rem;
-    color: #fff;
-    background-color: #021534!important;
+    font-family: "DM Serif Text", serif;
+    font-size: 1.5rem;
+    color: #ffffff;
+    background-color: #ff4000;
+    background-image: linear-gradient(135deg, #ff4000 36%, #ff5700 40%, #ff6e00 48%, #ff8500 57%);
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    -webkit-text-fill-color: black;
+    -webkit-text-stroke: .5px rgba(0, 0, 0, 0.521);
     text-align: center;
     padding: 1rem;
     border-radius: 1px;
@@ -129,23 +218,78 @@ section {
     justify-content: center;
 }
 
+.earth {
+    width: 400px;
+    height: 400px;
+    background: url("pictures/worldmap.png");
+    border-radius: 50%;
+    transform: rotate(23.5deg);
+    margin: 300px 200px 50px 50px;
+    padding: 20px 20px;
+    background-size: 700px;
+    box-shadow: inset 8px 36px 80px 36px rgba(0, 0, 0, 0.801),
+    inset -6px 0 12px 4px rgba(255, 255, 255, 0.363);
+    -webkit-animation-name: rotate;
+    -webkit-animation-duration: 12s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    animation-name: rotate;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes rotate {
+    from { background-position: 0px 0px; }
+    to { background-position: 700px 0px; }
+}
+@-webkit-keyframes rotate {
+    from { background-position: 0px 0px; }
+    to { background-position: 700px 0px; }
+}
+
+
 /*about us styling */
-#about h1{
+.about h1{
     text-align: center;
     margin-top: 100px;
-    font-size: 45px;
     justify-content: space-evenly;
     padding: 2rem 2rem;
+
+
 }
-.about-info p{
+.about-us{
+    font-size: 65px;
+    font-family: "Shrikhand", serif;
+    color: #ff4000;
+    background-image: linear-gradient(135deg, #ff4000 36%, #ff5700 40%, #ff6e00 48%, #ff8500 57%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: .5px rgba(255, 255, 255, 0.7);
+
+}
+.about-info {
     display: flex;
     align-items: center;
     text-align: center;
     justify-content: space-evenly;
     gap: 2rem;
-    font-size: 30px;
+    font-size: 25px;
     max-width: 1100px;
     line-height: 2em;
+    margin-left: 200px;
+    font-family: "DM Serif Text", serif;
+    color: #fff;
+    text-shadow:
+    0.03em 0 black,
+    0 0.03em black,
+    0.03em 0 black,
+    0 -0.03em black,
+    -0.03em -0.03em black,
+    -0.03em 0.03em black,
+    0.03em -0.03em black,
+    0.03em 0.03em black;
 }
 
 .employee-container{
@@ -153,22 +297,23 @@ section {
     align-items: center;
     justify-content: space-evenly;
     flex-direction: row;
-    margin: 50px;
+    margin: 50px 50px 50px 250px;
     padding: 20px;
     gap: 3rem;
     box-shadow: 0 6px 10px #22272e;
+    width: 1000px;
 
 }
 
 .employee-card{
-    width: 500px;
+    width: 600px;
     height: 600px;
-
+    background-color: #021534;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 50px;
+    gap: 30px;
     padding: 1rem 2rem;
 
 }
@@ -177,16 +322,40 @@ section {
     font-style: bold;
     text-align: center;
     margin:auto;
+    font-family: "DM Serif Text", serif;
+    color: #fff;
+    background-color: #021534;
+    text-shadow:
+    0.03em 0 black,
+    0 0.03em black,
+    0.03em 0 black,
+    0 -0.03em black,
+    -0.03em -0.03em black,
+    -0.03em 0.03em black,
+    0.03em -0.03em black,
+    0.03em 0.03em black;
 
 }
-.employee-details{
-    font-size: 25px;
-    color: #000;
+.empolyee-details {
+    font-size: 20px;
     line-height: 2em;
     margin-top: 15px;
+    background-color: #021534;
+    font-family: "DM Serif Text", serif;
+    color: #fff;
+    font-weight: 200;
+    text-shadow:
+    0.03em 0 black,
+    0 0.03em black,
+    0.03em 0 black,
+    0 -0.03em black,
+    -0.03em -0.03em black,
+    -0.03em 0.03em black,
+    0.03em -0.03em black,
+    0.03em 0.03em black;
 }
 .employee-pic{
-    width: 50%;
+    width: 45%;
     height: 35%;
 }
 
@@ -194,66 +363,148 @@ section {
     font-size: 25px;
     font-style: bolder;
     font-weight: 600;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    background-color: #021534;
+    font-family: "DM Serif Text", serif;
+    color: #fff;
+    text-shadow:
+    0.03em 0 black,
+    0 0.03em black,
+    0.03em 0 black,
+    0 -0.03em black,
+    -0.03em -0.03em black,
+    -0.03em 0.03em black,
+    0.03em -0.03em black,
+    0.03em 0.03em black;
 }
 
 /*contact page styling */
 
-.contact div.form-group{
-    max-width: 1100px;
-    max-height: auto;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 50px;
-    margin-top: 100px;
+.contact {
+    height: 100% ;
+    gap: 30px;
+    margin-top: 50px;
 
 }
-.contact-info {
-    display: flex;
-    align-self: center;
-    gap: 2rem;
-    font-size: 45px;
-    margin: 50px 50px 30px 50px;
-    padding: 2rem 2rem;
+
+.contact-title {
+    font-size: 60px;
     text-align: center;
-
-}
-.form-group {
-    display: flex;
-    gap: 1rem;
-    margin-top: 90px;
-    margin-bottom: 20px;
-    border-radius: 2rem;
-    border: none;
-    box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.11);
-    align-items: center;
-    justify-content: space-evenly;
-    flex-direction: column;
-    max-width: 900px;
+    gap: 2.5rem;
+    line-height: 3em;
+    font-family: "Shrikhand", serif;
+    color: #ff4000;
+    background-image: linear-gradient(135deg, #ff4000 36%, #ff5700 40%, #ff6e00 48%, #ff8500 57%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: .5px rgba(255, 255, 255, 0.7);
 
 
 }
-label, input[type="text"],input[type="email"], textarea {
-    padding: 1rem 1rem;
-    background-color: #fff;
-    color: #000;
-
-
+.form-group{
+    column-gap: 45px;
+    background-color: #021534;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.363);
+    max-width: 1000px;
+    max-height: 1000px;
+    border-radius: 15px;
+    margin: 80px 30px 40px 300px;
+    padding: 10px;
+    align-content: center;
 }
-label {
-    font-size: 20px;
-}
-.form-group button{
-    padding: 10px 20px;
-    background-color: #E0E0E2;
+.contact-group{
+    display: inline-block;
+    box-sizing: border-box;
+    column-gap: 30px;
+    background-color: #021534;
+    font-family: "DM Serif Text", serif;
     color: #fff;
-    border: none;
+    margin: 20px 20px 10px 20px;
+    font-size: 25px;
+    padding: 20px;
+
+}
+#name, #email, #message{
+    width: 100%;
+    font-size: 20px;
+    border: solid 1px #555;
+    border-radius: 5px;
+    font-weight: 100 !important;
+    font-style: italic;
+}
+#message{
+    resize: none;
+    max-height: 200px;
+    appearance: auto;
+
+}
+.submit{
+    text-align: center;
+    line-height: 1.5em;
+    align-content: center;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+.submitBtn{
     cursor: pointer;
-    margin-bottom: 50px;
+    transition: all 0.3s ease;
+    padding: 10px 10px;
+    line-height: 1.5em;
+    background-color: #021534;
+    color: #fff;
+    font-size: 25px;
+    border-radius: 1rem;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.363);
 }
 
+/*search results */
+.search_location, #searchLocation{
+    position: relative;
+    max-width: 1500px;
+
+
+}
+.search-container{
+    margin: 30px 20px 0 1450px;
+    gap: 10px;
+    max-height: fit-content !important;
+    position: absolute;
+
+}
+.location-card{
+
+    width: 400px;
+    height: 400px;
+    background-color: rgba(255, 255, 255, 0.623);
+    border-radius: 10px;
+    text-align: center;
+    padding: 5px 5px;
+    margin: 10px;
+    box-sizing: border-box;
+    z-index: 1;
+
+
+
+}
+.location-name{
+    font-size: 25px;
+    font-style: 400;
+    margin-bottom: 5px;
+    font-family: "DM Serif Text", serif;
+}
+
+.location-info{
+    font-size: 15px;
+    line-height: 1.5em;
+    margin-top: 10px;
+    font-family: "DM Serif Text", serif;
+}
+.loc_img{
+    width: 75%;
+    height: 75%;
+
+}
 
 /*on every page */
 .socials {
@@ -272,13 +523,9 @@ label {
     height: 2rem;
     mix-blend-mode: multiply;
   }
-
 footer {
-  position: fixed;
-  height: 50px;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-  margin-bottom: 0px;
-
-  }
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    height: 50px;
+}
